@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<header>
+    {% block head %}
+
+    <link rel="stylesheet" href="style.css">
+    <title>{{title}}</title>
+    {% endblock %}
+</header>
+
+<body>
+    <div id="content">
+        {% block content %} {% endblock %}
+    </div>
+
+</body>
+<footer id="footer">
+    {% block footer %} &copy; Copyright 2018 <a href="http://www.peterzettl.com">peter zettl</a> {% endblock %}
+
+</footer>
+
+</html>
