@@ -1,17 +1,77 @@
 {% extends "base.html" %} {% block content %}
-<form action="" method="post">
-    <header><b>User Signup</b></header>
-    <table>
-        <tbody>
-            <tr>
-                <td><label for="username"><h3>Username:</h3></label></td>
-                <td><input type="text" name="username"></td>
-            </tr>
-        </tbody>
-    </table>
-    <input type="button" value="submit">
+
+<style>
+    .error {
+        color: red;
+    }
+</style>
+<form action="/welcome" method="post">
+    <header>
+        <b>User Signup</b>
+    </header>
+
+    <body>
 
 
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="username" style="display:inline-block;"><h3>Username:</h3></label></td>
+                    <td><label for="error" class="error" style="display:inline-block;"><p>{{username_error}}</p></label></td>
+                    <td><input id="username" type="text" name="username" value="{{ username }}" />
+
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="email" style="display:inline-block;"><h3>Email:</h3></label></td>
+                    <td><label for="error" class="error" style="display:inline-block;"><p>{{email_error}}</p></label></td>
+                    <td><input id="email" type="text" name="email" value="{{ email }}" />
+
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="password" style="display:inline-block;"><h3>Password:</h3></label></td>
+                    <td><label for="error" class="error" style="display:inline-block;"><p>{{password_error}}</p></label></td>
+                    <td><input id="password" type="password" name="password" value="{{ password }}" />
+
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="verify" style="display:inline-block;"><h3>Verify:</h3></label></td>
+                    <td><label for="error" class="error" style="display:inline-block;"><p>{{verify_error}}</p></label></td>
+                    <td><input id="verify" type="password" name="verify" value="{{ verify }}" />
+
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+
+
+
+    </body>
+    <input type="submit" value="submit" />
 </form>
-
 {% endblock %}

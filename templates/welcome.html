@@ -1,4 +1,15 @@
-{% extend "base.html" %} {% block content %}
-<p>Welcome, {{username}} !!!</p>
+{% extends "base.html" %} {% block content %}
+<form action="/welcome" method="post">
 
-{% endblock %}
+    <body>
+        <p>Welcome, {{ username }} !!!</p>
+    </body>
+
+</form>
+
+{% if error %}
+<p class='error'>{{ error }}</pclass>
+</p>
+<form action="/"><input type="submit" value="back" /></form>
+
+{% endif %} {% endblock %}
