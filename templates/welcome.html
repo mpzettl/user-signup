@@ -2,12 +2,13 @@
 <form action="/welcome" method="post">
 
     <body>
-        <p>Welcome, {{ username }} !!!</p>
+        <h2>
+            <p>Welcome, {{ username }} !!!</p>
+        </h2>
     </body>
 
 </form>
-
-{% if error %}
+<hr> {% if error %}
 <p class='error'>{{ error }}</pclass>
 </p>
 <form action="/welcome"><input type="submit" value="back" /></form>
