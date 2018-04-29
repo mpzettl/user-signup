@@ -17,10 +17,13 @@
             <tbody>
                 <tr>
                     <td><label for="username" style="display:inline-block;"><h3>Username:</h3></label></td>
+                    <td><input id="username" type="text" name="username" value="{{ username }}" /></td>
                     <td><label for="error" class="error" style="display:inline-block;"><p>{{username_error}}</p></label></td>
-                    <td><input id="username" type="text" name="username" value="{{ username }}" />
+                    <td><label for="error" class="error" style="display:inline-block;"><p>{{fill_error}}</p></label></td>
+                    <td><label for="error" class="error" style="display:inline-block;"><p>{{userlen_error}}</p></label></td>
 
-                    </td>
+
+
 
                 </tr>
             </tbody>
@@ -29,10 +32,11 @@
             <tbody>
                 <tr>
                     <td><label for="email" style="display:inline-block;"><h3>Email:</h3></label></td>
+                    <td><input id="email" type="text" name="email" value="{{ email }}" /></td>
                     <td><label for="error" class="error" style="display:inline-block;"><p>{{email_error}}</p></label></td>
-                    <td><input id="email" type="text" name="email" value="{{ email }}" />
 
-                    </td>
+
+
 
                 </tr>
             </tbody>
@@ -43,10 +47,10 @@
             <tbody>
                 <tr>
                     <td><label for="password" style="display:inline-block;"><h3>Password:</h3></label></td>
+                    <td><input id="password" type="password" name="password" value="{{ password }}" /></td>
                     <td><label for="error" class="error" style="display:inline-block;"><p>{{password_error}}</p></label></td>
-                    <td><input id="password" type="password" name="password" value="{{ password }}" />
+                    <td><label for="error" class="error" style="display:inline-block;"><p>{{fill_error}}</p></label></td>
 
-                    </td>
 
                 </tr>
             </tbody>
@@ -55,10 +59,12 @@
             <tbody>
                 <tr>
                     <td><label for="verify" style="display:inline-block;"><h3>Verify:</h3></label></td>
+                    <td><input id="verify" type="password" name="verify" value="{{ verify }}" /></td>
                     <td><label for="error" class="error" style="display:inline-block;"><p>{{verify_error}}</p></label></td>
-                    <td><input id="verify" type="password" name="verify" value="{{ verify }}" />
+                    <td><label for="error" class="error" style="display:inline-block;"><p>{{fill_error}}</p></label></td>
 
-                    </td>
+
+
 
                 </tr>
             </tbody>
