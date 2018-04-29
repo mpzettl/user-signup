@@ -32,34 +32,34 @@ def welcome():
     
     if username == "" or password =="" or verify =="":
 
-        return render_template('home.html', fill_error=fill_error)
+        return render_template('home.html', username=username, email=email, fill_error=fill_error)
     
     elif  " " in username or " " in password:
 
-        return  render_template('home.html', username_error=username_error)
+        return  render_template('home.html', username=username, email=email, username_error=username_error)
     
     elif len(username) < 3 or len(username) > 20:
 
-        return render_template('home.html', userlen_error=userlen_error)
+        return render_template('home.html', username=username, email=email, userlen_error=userlen_error)
     
     elif len(password) < 3 or len(password) > 20:
 
-        return render_template('home.html', password_error=password_error)
+        return render_template('home.html', username=username, email=email, password_error=password_error)
     
     elif len(email) <3 or len(email) > 20:
 
-        return render_template('home.html', email_error=email_error)
+        return render_template('home.html', username=username, email=email, email_error=email_error)
     
     elif "@" not in email:
 
-        return render_template('home.html', email_error=email_error)
+        return render_template('home.html', username=username, email=email, email_error=email_error)
 
     elif "." not in email:
 
-        return render_template('home.html', email_error=email_error)
+        return render_template('home.html', username=username, email=email, email_error=email_error)
 
     elif " " in email:
-        return render_template('home.html', email_error=email_error)
+        return render_template('home.html', username=username, email=email, email_error=email_error)
 
     elif password == verify:
     
@@ -67,7 +67,7 @@ def welcome():
     
     else:
         
-        return render_template('home.html', verify_error=verify_error)  
+        return render_template('home.html', username=username, email=email, verify_error=verify_error)  
 
 if (__name__) == "__main__":
     app.run()
